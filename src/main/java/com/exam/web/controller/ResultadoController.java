@@ -5,6 +5,7 @@ import com.exam.web.repository.ResultadoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,6 +26,12 @@ public class ResultadoController {
     @GetMapping
     public List<Resultado> getResultadoAll() {
         return resultadoRepo.findAll();
+    }
+
+    @PostMapping
+    public Resultado postResultado(@RequestBody Resultado resultado) {
+        resultadoRepo.save(resultado);
+        return resultado;
     }
 
     @PutMapping("/{id}")
