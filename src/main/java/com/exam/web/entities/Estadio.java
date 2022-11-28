@@ -24,5 +24,5 @@ public class Estadio {
     private String nombre;
 
     @Column(name = "capacidad")
-    private int capacidad;
+    private Integer capacidad;
 }

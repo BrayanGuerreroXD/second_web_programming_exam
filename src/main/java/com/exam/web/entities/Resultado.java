@@ -31,11 +31,11 @@ public class Resultado {
     private Seleccion seleccion;
 
     @Column(name = "goles")
-    private int goleS;
+    private Integer goles;
 
     @Column(name = "amarillas")
-    private int amarillas;
+    private Integer amarillas;
 
     @Column(name = "rojas")
-    private int rojas;
+    private Integer rojas;
 }
